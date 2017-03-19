@@ -1,0 +1,41 @@
+body {
+	padding-top: 50px;
+}
+
+.caption {
+	height: 130px;
+	overflow: hidden;
+}
+
+.caption h4 {
+	white-space: nowrap;
+}
+
+.thumbnail img {
+	width: 100%;
+}
+
+a.thumbnail {
+	text-decoration: none;
+}
+
+.thumbnail {
+	border-radius: 0;
+	-webkit-appearance: none;
+	padding: 0;
+}
+
+.thumbnail .caption-full {
+	padding: 9px;
+	color: #333;
+}
+
+.searchbox {
+	padding: 0px 20px;
+}
+
+.searchbox .btn, .dropdown-menu {
+	border-radius: 0;
+	-webkit-appearance: none;
+	margin: 2px 0px;
+}
