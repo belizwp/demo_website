@@ -1,210 +1,196 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <meta name="description" content="">
   <meta name="author" content="">
+  <link rel="icon" href="#">
 
   <title>Real Estate Trading System</title>
 
-  <!-- Bootstrap Core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-select.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+</head>
 
-  <!-- Custom CSS -->
-  <link href="css/index.css" rel="stylesheet">
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-      </head>
-
-      <body>
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-          <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">RETS</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav">
-                <li class="active">
-                  <a href="#">หน้าแรก</a>
-                </li>
-                <li>
-                  <a href="#">ลงประกาศ</a>
-                </li>
-                <li>
-                  <a href="#">ติดต่อ</a>
-                </li>
-              </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-          </div>
-          <!-- /.container -->
-        </nav>
-
-        <div class="jumbotron">
-          <div class="container text-center">
-            <h1>Real Estate Trading System</h1>
-            <p>(RETS)</p>
-          </div>
-
-          <div class="searchbox">
-            <div class="col-md-6 col-md-offset-3">
-              <form action="#">
-                <div class="input-group input-group-md">
-                  <input type="text" class="form-control" placeholder="ค้นหาจากทำเล หรือ ชื่อโครงการ">
-
-                  <div class="input-group-btn">
-
-                   <div class="btn-group btn-group-md">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ขาย <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li role="separator" class="divider"></li>
-                      <li><a href="#">Separated link</a></li>
-                    </ul>
-                  </div>
-
-                  <div class="btn-group btn-group-md">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ที่อยู่อาศัย <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li role="separator" class="divider"></li>
-                      <li><a href="#">Separated link</a></li>
-                    </ul>
-                  </div>
-
-                  <div class="btn-group btn-group-md">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ราคา <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li role="separator" class="divider"></li>
-                      <li><a href="#">Separated link</a></li>
-                    </ul>
-                  </div>
-
-                  <div class="btn-group btn-group-md">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">เพิ่มเงื่อนไขค้นหา <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li role="separator" class="divider"></li>
-                      <li><a href="#">Separated link</a></li>
-                    </ul>
-                  </div>
-
-                  <div class="btn-group btn-group-md"> <button type="button" class="btn btn-info">ค้นหา</button></div>
-                </div><!-- /btn-group -->
-              </div><!-- /input-group -->
-            </form>
-          </div>
-        </div>
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">RETS</a>
       </div>
-
-      <!-- Page Content -->
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-md-">
-
-            <div class="row">
-
-              <div class="col-sm-3 col-lg-3 col-md-3">
-                <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/350x200" alt="ALT NAME">
-                  <div class="caption">
-                    <h4>Residential</h4>
-                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">หน้าหลัก</a></li>
+          <li><a href="#about">ขาย</a></li>
+          <li><a href="#contact">เช่า</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">ลงทะเบียน</a></li>
+          <p class="navbar-text">หรือ</p>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">เข้าสู่ระบบ <b class="caret"></b></a>
+            <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
+              <li>
+                <div class="row">
+                  <div class="col-md-12">
+                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                      <div class="form-group">
+                        <input type="email" class="form-control" placeholder="อีเมล์" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" placeholder="รหัสผ่าน" required>
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox"> จดจำฉัน </label>
+                      </div>
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block">เข้าสู่ระบบ</button>
+                      </div>
+                    </form>
                   </div>
-                </a>
-              </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
 
-              <div class="col-sm-3 col-lg-3 col-md-3">
-                <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/350x200" alt="ALT NAME">
-                  <div class="caption">
-                    <h4>Residential</h4>
-                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-sm-3 col-lg-3 col-md-3">
-                <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/350x200" alt="ALT NAME">
-                  <div class="caption">
-                    <h4>Residential</h4>
-                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-sm-3 col-lg-3 col-md-3">
-                <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/350x200" alt="ALT NAME">
-                  <div class="caption">
-                    <h4>Residential</h4>
-                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </a>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-      <!-- /.container -->
-
-      <div class="container">
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
+  <div class="jumbotron">
+    <div class="container text-center">
+      <h1>Real Estate Trading System</h1>
+      <p>(RETS)</p>
+      <div class="searchbox">
+        <form action="#">
           <div class="row">
-            <div class="col-lg-12">
-              <p>Copyright &copy; RETS 2017</p>
-            </div>
+
+            <select class="selectpicker col-md-*" data-live-search="true" title="จังหวัด" data-size="5">
+              <option >กรุงเทพฯ</option>
+              <option >พังงา</option>
+              <option >น่าน</option>
+              <option >สระบุรี</option>
+              <option >หัวหมาก</option>
+              <option >ชลบุรี</option>
+              <option >กาญ</option>
+              <option >เชียงใหม่</option>
+              <option >TEST</option>
+              <option >กรุงเทพฯ</option>
+              <option >พังงา</option>
+              <option >น่าน</option>
+              <option >สระบุรี</option>
+              <option >หัวหมาก</option>
+              <option >ชลบุรี</option>
+              <option >กาญ</option>
+              <option >เชียงใหม่</option>
+              <option >TEST</option>
+            </select>
+
+            <select class="selectpicker col-md-*" title="[เลือก จังหวัด]" disabled>
+              <option>ลาดกระบัง</option>
+              <option>ประเวศ</option>
+              <option>หัวตะเข้</option>
+              <option>สวนหลวง</option>
+            </select>
+
+            <select class="selectpicker col-md-*" title="ประกาศสำหรับ">
+              <option>ทั้งหมด</option>
+              <option>ขาย</option>
+              <option>เช่า</option>
+            </select>
+
+            <select class="selectpicker col-md-*" title="ประเภท">
+              <option>บ้านเดี่ยว</option>
+              <option>คอนโด</option>
+              <option>ทาวน์เฮ้าส์</option>
+              <option>ที่ดิน</option>
+              <option>อพาร์ทเม้น</option>
+            </select>
+
+            
+            <select class="selectpicker col-md-*" title="ราคา">
+              <option>ฟรี</option>
+            </select>
+            
+
+            <button type="button" class="btn btn-info col-md-*">ค้นหา</button>
           </div>
-        </footer>
+        </form> <!--/search form-->
+      </div> <!--/search box-->
+    </div>
+  </div>
 
+  <!--content-->
+  <div class="container">
+    <!--new residential-->
+    <h4><b>โครงการใหม่แนะนำ</b></h4>
+    <div class="row new-residential">
+      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+        <a href="#" class="thumbnail">
+          <img src="http://placehold.it/350x200" alt="ALT NAME">
+          <div class="caption">
+            <h4>Residential</h4>
+            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </a>
       </div>
-      <!-- /.container -->
+      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+        <a href="#" class="thumbnail">
+          <img src="http://placehold.it/350x200" alt="ALT NAME">
+          <div class="caption">
+            <h4>Residential</h4>
+            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+        <a href="#" class="thumbnail">
+          <img src="http://placehold.it/350x200" alt="ALT NAME">
+          <div class="caption">
+            <h4>Residential</h4>
+            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+        <a href="#" class="thumbnail">
+          <img src="http://placehold.it/350x200" alt="ALT NAME">
+          <div class="caption">
+            <h4>Residential</h4>
+            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </a>
+      </div>
+    </div>
 
-      <!-- jQuery -->
-      <script src="js/jquery-3.1.1.min.js"></script>
+    <!--news adverstise -->
+    <div class="row adverstise"></div>
+  </div><!-- /.container -->
 
-      <!-- Bootstrap Core JavaScript -->
-      <script src="js/bootstrap.min.js"></script>
+  <div class="container">
+    <footer>
+      <hr>
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright &copy; RETS 2017</p>
+        </div>
+      </div>
+    </footer>
+  </div>
 
-    </body>
-
-    </html>
+  <script src="js/jquery-3.2.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-select.min.js"></script>
+</body>
+</html>
