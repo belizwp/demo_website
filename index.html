@@ -32,19 +32,19 @@
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <li class="active"><a href="#">หน้าหลัก</a></li>
-          <li><a href="#about">ขาย</a></li>
-          <li><a href="#contact">เช่า</a></li>
+          <li><a href="result_buy.html">ขาย</a></li>
+          <li><a href="result_rent.html">เช่า</a></li>
+          <li><a href="#">ลงประกาศ</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#">ลงทะเบียน</a></li>
-          <p class="navbar-text">หรือ</p>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">เข้าสู่ระบบ <b class="caret"></b></a>
             <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
               <li>
                 <div class="row">
                   <div class="col-md-12">
-                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                    <form action="#" class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                       <div class="form-group">
                         <input type="email" class="form-control" placeholder="อีเมล์" required>
                       </div>
@@ -73,8 +73,9 @@
       <h1>Real Estate Trading System</h1>
       <p>(RETS)</p>
       <div class="searchbox">
-        <form action="#">
+        <form action="result_buy.html">
           <div class="row">
+
 
             <select class="selectpicker col-md-*" data-live-search="true" title="จังหวัด" data-size="5">
               <option >กรุงเทพฯ</option>
@@ -111,6 +112,7 @@
             </select>
 
             <select class="selectpicker col-md-*" title="ประเภท">
+              <option>ทั้งหมด</option>
               <option>บ้านเดี่ยว</option>
               <option>คอนโด</option>
               <option>ทาวน์เฮ้าส์</option>
@@ -122,9 +124,8 @@
             <select class="selectpicker col-md-*" title="ราคา">
               <option>ฟรี</option>
             </select>
-            
 
-            <button type="button" class="btn btn-info col-md-*">ค้นหา</button>
+            <button type="submit" class="btn btn-info col-md-*">ค้นหา</button>
           </div>
         </form> <!--/search form-->
       </div> <!--/search box-->
@@ -132,13 +133,13 @@
   </div>
 
   <!--content-->
-  <div class="container">
+  <div class="container show-residential">
     <!--new residential-->
     <h4><b>โครงการใหม่แนะนำ</b></h4>
     <div class="row new-residential">
       <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
         <a href="#" class="thumbnail">
-          <img src="http://placehold.it/350x200" alt="ALT NAME">
+          <img src="http://placehold.it/350x250" alt="ALT NAME">
           <div class="caption">
             <h4>Residential</h4>
             <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -147,7 +148,7 @@
       </div>
       <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
         <a href="#" class="thumbnail">
-          <img src="http://placehold.it/350x200" alt="ALT NAME">
+          <img src="http://placehold.it/350x250" alt="ALT NAME">
           <div class="caption">
             <h4>Residential</h4>
             <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -156,7 +157,7 @@
       </div>
       <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
         <a href="#" class="thumbnail">
-          <img src="http://placehold.it/350x200" alt="ALT NAME">
+          <img src="http://placehold.it/350x250" alt="ALT NAME">
           <div class="caption">
             <h4>Residential</h4>
             <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -165,7 +166,7 @@
       </div>
       <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
         <a href="#" class="thumbnail">
-          <img src="http://placehold.it/350x200" alt="ALT NAME">
+          <img src="http://placehold.it/350x250" alt="ALT NAME">
           <div class="caption">
             <h4>Residential</h4>
             <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -174,8 +175,11 @@
       </div>
     </div>
 
-    <!--news adverstise -->
-    <div class="row adverstise"></div>
+    <div class="container text-center">
+      <a href="result_buy.html" type="button" class="btn btn-default">ดูโครงการทั้งหมด</a>
+      <a href="result_buy.html" type="button" class="btn btn-danger">ลงประกาศกับเรา</a>
+    </div>
+
   </div><!-- /.container -->
 
   <div class="container">

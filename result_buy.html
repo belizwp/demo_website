@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="#">
+
+  <title>Real Estate Trading System</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-select.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">RETS</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">หน้าหลัก</a></li>
+          <li class="active"><a href="index.html">ขาย</a></li>
+          <li><a href="result_rent.html">เช่า</a></li>
+          <li><a href="#">ลงประกาศ</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">ลงทะเบียน</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">เข้าสู่ระบบ <b class="caret"></b></a>
+            <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
+              <li>
+                <div class="row">
+                  <div class="col-md-12">
+                    <form action="#" class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                      <div class="form-group">
+                        <input type="email" class="form-control" placeholder="อีเมล์" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" placeholder="รหัสผ่าน" required>
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox"> จดจำฉัน </label>
+                      </div>
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block">เข้าสู่ระบบ</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-10">
+            <div class="searchbox">
+              <form action="result_buy.html">
+                <div class="row">
+
+                  <select class="selectpicker col-md-*" data-live-search="true" title="จังหวัด" data-size="5">
+                    <option selected>ทั้งหมด</option>
+                    <option >กรุงเทพฯ</option>
+                    <option >พังงา</option>
+                    <option >น่าน</option>
+                    <option >สระบุรี</option>
+                    <option >หัวหมาก</option>
+                    <option >ชลบุรี</option>
+                    <option >กาญ</option>
+                    <option >เชียงใหม่</option>
+                    <option >TEST</option>
+                    <option >กรุงเทพฯ</option>
+                    <option >พังงา</option>
+                    <option >น่าน</option>
+                    <option >สระบุรี</option>
+                    <option >หัวหมาก</option>
+                    <option >ชลบุรี</option>
+                    <option >กาญ</option>
+                    <option >เชียงใหม่</option>
+                    <option >TEST</option>
+                  </select>
+
+                  <select class="selectpicker col-md-*" title="[เลือก จังหวัด]" disabled>
+                    <option>ลาดกระบัง</option>
+                    <option>ประเวศ</option>
+                    <option>หัวตะเข้</option>
+                    <option>สวนหลวง</option>
+                  </select>
+
+                  <select class="selectpicker col-md-*">
+                    <option>ทั้งหมด</option>
+                    <option selected>ขาย</option>
+                    <option>เช่า</option>
+                  </select>
+
+                  <select class="selectpicker col-md-*" title="ประเภท">
+                    <option selected>ทั้งหมด</option>
+                    <option>บ้านเดี่ยว</option>
+                    <option>คอนโด</option>
+                    <option>ทาวน์เฮ้าส์</option>
+                    <option>ที่ดิน</option>
+                    <option>อพาร์ทเม้น</option>
+                  </select>
+
+
+                  <select class="selectpicker col-md-*" title="ราคา">
+                    <option selected>ไม่ระบุ</option>
+                    <option>ฟรี</option>
+                  </select>
+
+                  <button type="submit" class="btn btn-info col-md-*">ค้นหา</button>
+                </div>
+              </form> <!--/search form-->
+            </div> <!--/search box-->
+          </div>
+          <div class="col-md-2">
+            <a href="#.html" type="button" class="btn btn-danger pull-right";">ลงประกาศกับเรา</a>
+          </div>
+        </div> <!--/row-->
+      </div>
+    </div><!-- /panel -->
+  </div><!-- /container -->
+  
+
+  <!-- search result -->
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-9"> <!-- result left side-->
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h4>ผลการค้นหา 12,345 ประกาศ</h4>
+            <div class="row">
+              <div class="list-group list-special result">
+                <a href="#" class="list-group-item row-fluid">
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+                    <figure class="pull-left">
+                      <img class="img-responsive" src="http://placehold.it/200x200">
+                    </figure>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                    <div class="caption">
+                      <h4>Residential</h4>
+                      <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                  </div>
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+                    <h4> 14,200,000 <small> บาท </small></h4>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item row-fluid">
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+                    <figure class="pull-left">
+                      <img class="img-responsive" src="http://placehold.it/200x200">
+                    </figure>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                    <div class="caption">
+                      <h4>Residential</h4>
+                      <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                  </div>
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+                    <h4> 14,200,000 <small> บาท </small></h4>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item row-fluid">
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+                    <figure class="pull-left">
+                      <img class="img-responsive" src="http://placehold.it/200x200">
+                    </figure>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                    <div class="caption">
+                      <h4>Residential</h4>
+                      <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                  </div>
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+                    <h4> 14,200,000 <small> บาท </small></h4>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item row-fluid">
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+                    <figure class="pull-left">
+                      <img class="img-responsive" src="http://placehold.it/200x200">
+                    </figure>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                    <div class="caption">
+                      <h4>Residential</h4>
+                      <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                  </div>
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+                    <h4> 14,200,000 <small> บาท </small></h4>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item row-fluid">
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+                    <figure class="pull-left">
+                      <img class="img-responsive" src="http://placehold.it/200x200">
+                    </figure>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                    <div class="caption">
+                      <h4>Residential</h4>
+                      <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                  </div>
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+                    <h4> 14,200,000 <small> บาท </small></h4>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item row-fluid">
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+                    <figure class="pull-left">
+                      <img class="img-responsive" src="http://placehold.it/200x200">
+                    </figure>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                    <div class="caption">
+                      <h4>Residential</h4>
+                      <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                  </div>
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+                    <h4> 14,200,000 <small> บาท </small></h4>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item row-fluid">
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+                    <figure class="pull-left">
+                      <img class="img-responsive" src="http://placehold.it/200x200">
+                    </figure>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                    <div class="caption">
+                      <h4>Residential</h4>
+                      <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                  </div>
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+                    <h4> 14,200,000 <small> บาท </small></h4>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item row-fluid">
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+                    <figure class="pull-left">
+                      <img class="img-responsive" src="http://placehold.it/200x200">
+                    </figure>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                    <div class="caption">
+                      <h4>Residential</h4>
+                      <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                  </div>
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+                    <h4> 14,200,000 <small> บาท </small></h4>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item row-fluid">
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+                    <figure class="pull-left">
+                      <img class="img-responsive" src="http://placehold.it/200x200">
+                    </figure>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                    <div class="caption">
+                      <h4>Residential</h4>
+                      <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                  </div>
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+                    <h4> 14,200,000 <small> บาท </small></h4>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item row-fluid">
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+                    <figure class="pull-left">
+                      <img class="img-responsive" src="http://placehold.it/200x200">
+                    </figure>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                    <div class="caption">
+                      <h4>Residential</h4>
+                      <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                  </div>
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+                    <h4> 14,200,000 <small> บาท </small></h4>
+                  </div>
+                </a>
+              </div><!--/list group-->
+            </div><!--/row-->
+
+            <div class="text-center">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+                <li class="page-item"><a class="page-link" href="#">255</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </li>
+              </ul>
+            </div><!-- /pagination-->
+
+          </div><!-- /panel body-->
+        </div><!-- /panel-->
+      </div><!-- /result left side-->
+
+      <div class="col-md-3"> <!-- ads right side-->
+        <h4><b>โครงการใหม่แนะนำ</b></h4>
+        <div class="row new-residential">
+          <div class="col-xs-6 col-sm-6 col-md-12 col-lg-12">
+            <a href="#" class="thumbnail">
+              <img src="http://placehold.it/350x200" alt="ALT NAME">
+              <div class="caption">
+                <h4>Residential</h4>
+                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-12 col-lg-12">
+            <a href="#" class="thumbnail">
+              <img src="http://placehold.it/350x200" alt="ALT NAME">
+              <div class="caption">
+                <h4>Residential</h4>
+                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div><!-- /ads right side-->
+
+    </div><!-- /row-->
+  </div><!-- /container-->
+
+  <div class="container">
+    <footer>
+      <hr>
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright &copy; RETS 2017</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery-3.2.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-select.min.js"></script>
+</body>
+</html>
