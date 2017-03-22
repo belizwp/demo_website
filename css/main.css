@@ -3,15 +3,6 @@ body {
 	background-color: #FAFAFA;
 }
 
-@media (max-width: @screen-xs) {
-	body{font-size: 10px;}
-}
-
-@media (max-width: @screen-sm) {
-	body{font-size: 14px;}
-}
-
-
 .jumbotron {
 	background-image: 	linear-gradient(
 		rgba(0, 0, 0, 0.5), 
@@ -90,14 +81,6 @@ a.thumbnail {
 .list-special .list-group-item {
 	border-left: none;
 	border-right: none;
-}
-
-.list-group-item h4 {
-	font-size: 1.8vw;
-}
-
-.list-group-item p {
-	font-size: 1.2vw;
 }
 
 a.list-group-item {
