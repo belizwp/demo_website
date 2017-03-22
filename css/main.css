@@ -3,6 +3,15 @@ body {
 	background-color: #FAFAFA;
 }
 
+@media (max-width: @screen-xs) {
+	body{font-size: 10px;}
+}
+
+@media (max-width: @screen-sm) {
+	body{font-size: 14px;}
+}
+
+
 .jumbotron {
 	background-image: 	linear-gradient(
 		rgba(0, 0, 0, 0.5), 
@@ -26,6 +35,10 @@ body {
 	border-radius: 0;
 	-webkit-appearance: none;
 	margin: 2px 0;
+}
+
+.btn:focus {
+	outline: none;
 }
 
 .caption {
@@ -74,6 +87,19 @@ a.thumbnail {
 	border-bottom-left-radius: 0px !important;
 }
 
+.list-special .list-group-item {
+	border-left: none;
+	border-right: none;
+}
+
+.list-group-item h4 {
+	font-size: 1.8vw;
+}
+
+.list-group-item p {
+	font-size: 1.2vw;
+}
+
 a.list-group-item {
 	overflow: hidden;  
 	position: relative;
@@ -84,4 +110,9 @@ a.list-group-item {
 .nopadding {
 	padding: 0 !important;
 	margin: 0 !important;
+}
+
+.panel .panel-subheading {
+	border-bottom: 1px solid;
+	border-color: #EEEEEE;
 }
