@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="#">
+
+  <title>Real Estate Trading System</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">RETS</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">หน้าหลัก</a></li>
+          <li><a href="result_buy.html">ขาย</a></li>
+          <li><a href="result_rent.html">เช่า</a></li>
+          <li><a href="create_announce.html">ลงประกาศ</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Nakarin K. <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">แก้ไขบัญชี</a></li>
+              <li><a href="#">ประกาศของฉัน</a></li>
+              <li><a href="#">รายการผู้ติดต่อ</a></li>
+              <li><a href="#">ออกจากระบบ</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <!--content-->
+  <div class="container">
+
+    <div class="panel panel-default"> 
+      <div class="panel-body">
+        <h4>สวัสดีคุณ Nakarin Kakanumporn &nbsp;
+          <span><small><a href="#"> แก้ไขข้อมูลสมาชิก </a> | <a href="#"> ออกจากระบบ </a></small></span>
+        </h4>
+      </div>
+    </div>
+
+    <div class="panel panel-default"> 
+      <div class="panel-body">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#announce" aria-controls="announce" role="tab" data-toggle="tab">ประกาศของฉัน</a></li>
+          <li role="presentation"><a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">รายชื่อผู้ติดต่อ</a></li>
+          <li role="presentation"><a href="#news" aria-controls="news" role="tab" data-toggle="tab">ข่าวของฉัน</a></li>
+          <li role="presentation"><a href="#member" aria-controls="member" role="tab" data-toggle="tab">รายชื่อสมาชิก</a></li>
+          <li role="presentation"><a href="#setting" aria-controls="setting" role="tab" data-toggle="tab">ตั้งค่าเว็บไซต์</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="announce">
+              <div class="table-responsive">
+                <table id="mytable" class="table table-bordred table-striped">
+                  <thead>
+                    <th><input type="checkbox" id="checkall" /></th>
+                    <th>รหัส</th>
+                    <th>สถานะ</th>
+                    <th>ชื่อเรื่อง</th>
+                    <th>วันที่แก้ไขล่าสุด</th>
+                    <th>จำนวนผู้ติดต่อ</th>
+                    <th>แก้ไข</th>
+                    <th>ลบ</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>000000</td>
+                      <td>ปกติ</td>
+                      <td><a href="property.html">ที่สุดแห่งทำเลทอง ITKMITL</a></td>
+                      <td>31/3/2017 23:59:59</td>
+                      <td>123</td>
+                      <td><p data-placement="top" title="Edit"><button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                      <td><p data-placement="top" title="Delete"><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>000001</td>
+                      <td>ปกติ</td>
+                      <td><a href="property.html">ที่สุดแห่งทำเลทอง ITKMITL</a></td>
+                      <td>31/3/2017 23:59:59</td>
+                      <td>123</td>
+                      <td><p data-placement="top" title="Edit"><button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                      <td><p data-placement="top" title="Delete"><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>000002</td>
+                      <td>ปกติ</td>
+                      <td><a href="property.html">ที่สุดแห่งทำเลทอง ITKMITL</a></td>
+                      <td>31/3/2017 23:59:59</td>
+                      <td>123</td>
+                      <td><p data-placement="top" title="Edit"><button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                      <td><p data-placement="top" title="Delete"><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>000003</td>
+                      <td>ปกติ</td>
+                      <td><a href="property.html">ที่สุดแห่งทำเลทอง ITKMITL</a></td>
+                      <td>31/3/2017 23:59:59</td>
+                      <td>123</td>
+                      <td><p data-placement="top" title="Edit"><button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                      <td><p data-placement="top" title="Delete"><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>000004</td>
+                      <td>ร่าง</td>
+                      <td><a href="property.html">ที่สุดแห่งทำเลทอง ITKMITL</a></td>
+                      <td>31/3/2017 23:59:59</td>
+                      <td>123</td>
+                      <td><p data-placement="top" title="Edit"><button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                      <td><p data-placement="top" title="Delete"><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>000005</td>
+                      <td>ร่าง</td>
+                      <td><a href="property.html">ที่สุดแห่งทำเลทอง ITKMITL</a></td>
+                      <td>31/3/2017 23:59:59</td>
+                      <td>123</td>
+                      <td><p data-placement="top" title="Edit"><button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                      <td><p data-placement="top" title="Delete"><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <ul class="pagination pull-right">
+                <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+              </ul>
+            </div> <!-- /announce pane -->
+
+            <div role="tabpanel" class="tab-pane fade" id="contact">
+              <div class="table-responsive">
+                <table id="mytable" class="table table-bordred table-striped">
+                  <thead>
+                    <th><input type="checkbox" id="checkall" /></th>
+                    <th>รหัสประกาศ</th>
+                    <th>ชื่อประกาศ</th>
+                    <th>วันที่ส่งมา</th>
+                    <th>ชื่อ</th>
+                    <th>เบอร์โทร</th>
+                    <th>อีเมล์</th>
+                    <th>ข้อความ</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>000000</td>
+                      <td><a href="property.html">ที่สุดแห่งทำเลทอง ITKMITL</a></td>
+                      <td>31/3/2017 23:59:59</td>
+                      <td>สมชาย ใจดี</td>
+                      <td>089-9999-9999</td>
+                      <td>somchai@somchai.com</td>
+                      <td>I’m interested in this property. Please contact me, thanks!</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>000000</td>
+                      <td><a href="property.html">ที่สุดแห่งทำเลทอง ITKMITL</a></td>
+                      <td>31/3/2017 23:59:59</td>
+                      <td>สมชาย ใจดี</td>
+                      <td>089-9999-9999</td>
+                      <td>somchai@somchai.com</td>
+                      <td>I’m interested in this property. Please contact me, thanks!</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>000000</td>
+                      <td><a href="property.html">ที่สุดแห่งทำเลทอง ITKMITL</a></td>
+                      <td>31/3/2017 23:59:59</td>
+                      <td>สมชาย ใจดี</td>
+                      <td>089-9999-9999</td>
+                      <td>somchai@somchai.com</td>
+                      <td>I’m interested in this property. Please contact me, thanks!</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>000000</td>
+                      <td><a href="property.html">ที่สุดแห่งทำเลทอง ITKMITL</a></td>
+                      <td>31/3/2017 23:59:59</td>
+                      <td>สมชาย ใจดี</td>
+                      <td>089-9999-9999</td>
+                      <td>somchai@somchai.com</td>
+                      <td>I’m interested in this property. Please contact me, thanks!</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>000000</td>
+                      <td><a href="property.html">ที่สุดแห่งทำเลทอง ITKMITL</a></td>
+                      <td>31/3/2017 23:59:59</td>
+                      <td>สมชาย ใจดี</td>
+                      <td>089-9999-9999</td>
+                      <td>somchai@somchai.com</td>
+                      <td>I’m interested in this property. Please contact me, thanks!</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <ul class="pagination pull-right">
+                <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+              </ul>
+            </div> <!-- /contact -->
+
+            <div role="tabpanel" class="tab-pane fade" id="news">
+              <div class="table-responsive">
+                <table id="mytable" class="table table-bordred table-striped">
+                  <thead>
+                    <th><input type="checkbox" id="checkall" /></th>
+                    <th>รหัส</th>
+                    <th>สถานะ</th>
+                    <th>ชื่อเรื่อง</th>
+                    <th>วันที่แก้ไขล่าสุด</th>
+                    <th>จำนวนผู้ติดต่อ</th>
+                    <th>แก้ไข</th>
+                    <th>ลบ</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>000000</td>
+                      <td>ปกติ</td>
+                      <td><a href="property.html">ที่สุดแห่งทำเลทอง ITKMITL</a></td>
+                      <td>31/3/2017 23:59:59</td>
+                      <td>123</td>
+                      <td><p data-placement="top" title="Edit"><button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                      <td><p data-placement="top" title="Delete"><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>000001</td>
+                      <td>ปกติ</td>
+                      <td><a href="property.html">ที่สุดแห่งทำเลทอง ITKMITL</a></td>
+                      <td>31/3/2017 23:59:59</td>
+                      <td>123</td>
+                      <td><p data-placement="top" title="Edit"><button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                      <td><p data-placement="top" title="Delete"><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>000002</td>
+                      <td>ปกติ</td>
+                      <td><a href="property.html">ที่สุดแห่งทำเลทอง ITKMITL</a></td>
+                      <td>31/3/2017 23:59:59</td>
+                      <td>123</td>
+                      <td><p data-placement="top" title="Edit"><button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                      <td><p data-placement="top" title="Delete"><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>000003</td>
+                      <td>ปกติ</td>
+                      <td><a href="property.html">ที่สุดแห่งทำเลทอง ITKMITL</a></td>
+                      <td>31/3/2017 23:59:59</td>
+                      <td>123</td>
+                      <td><p data-placement="top" title="Edit"><button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                      <td><p data-placement="top" title="Delete"><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>000004</td>
+                      <td>ร่าง</td>
+                      <td><a href="property.html">ที่สุดแห่งทำเลทอง ITKMITL</a></td>
+                      <td>31/3/2017 23:59:59</td>
+                      <td>123</td>
+                      <td><p data-placement="top" title="Edit"><button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                      <td><p data-placement="top" title="Delete"><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>000005</td>
+                      <td>ร่าง</td>
+                      <td><a href="property.html">ที่สุดแห่งทำเลทอง ITKMITL</a></td>
+                      <td>31/3/2017 23:59:59</td>
+                      <td>123</td>
+                      <td><p data-placement="top" title="Edit"><button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                      <td><p data-placement="top" title="Delete"><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <ul class="pagination pull-right">
+                <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+              </ul>
+            </div> <!-- /news -->
+
+            <div role="tabpanel" class="tab-pane fade" id="member">
+              <div class="table-responsive">
+                <table id="mytable" class="table table-bordred table-striped">
+                  <thead>
+                    <th><input type="checkbox" id="checkall" /></th>
+                    <th>รหัส</th>
+                    <th>สถานะ</th>
+                    <th>ชื่อ</th>
+                    <th>วันที่ใช้งานล่าสุด</th>
+                    <th>แก้ไข</th>
+                    <th>ลบ</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>000000</td>
+                      <td>ปกติ</td>
+                      <td><a href="property.html">สมชาย ใจดี</a></td>
+                      <td>31/3/2017 23:59:59</td>
+                      <td><p data-placement="top" title="Edit"><button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                      <td><p data-placement="top" title="Delete"><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>000000</td>
+                      <td>ปกติ</td>
+                      <td><a href="property.html">สมชาย ใจดี</a></td>
+                      <td>31/3/2017 23:59:59</td>
+                      <td><p data-placement="top" title="Edit"><button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                      <td><p data-placement="top" title="Delete"><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>000000</td>
+                      <td>ปกติ</td>
+                      <td><a href="property.html">สมชาย ใจดี</a></td>
+                      <td>31/3/2017 23:59:59</td>
+                      <td><p data-placement="top" title="Edit"><button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                      <td><p data-placement="top" title="Delete"><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>000000</td>
+                      <td>ปกติ</td>
+                      <td><a href="property.html">สมชาย ใจดี</a></td>
+                      <td>31/3/2017 23:59:59</td>
+                      <td><p data-placement="top" title="Edit"><button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                      <td><p data-placement="top" title="Delete"><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>000000</td>
+                      <td>ปกติ</td>
+                      <td><a href="property.html">สมชาย ใจดี</a></td>
+                      <td>31/3/2017 23:59:59</td>
+                      <td><p data-placement="top" title="Edit"><button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                      <td><p data-placement="top" title="Delete"><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <ul class="pagination pull-right">
+                <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+              </ul>
+            </div> <!-- /member -->
+
+            <div role="tabpanel" class="tab-pane fade" id="setting">setting</div>
+          </div>
+        </div>
+      </div> <!-- /panel body -->
+    </div> <!-- /panel -->
+
+  </div>
+  <!-- /.container -->
+
+  <div class="container">
+    <footer>
+      <hr>
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright &copy; RETS 2017</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery-3.2.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/dbtable.js"></script>
+</body>
+</html>

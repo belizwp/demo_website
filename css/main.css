@@ -83,6 +83,11 @@ a.thumbnail {
 	border-right: none;
 }
 
+.list-special {
+	margin: 0px;
+	border: none;
+}
+
 a.list-group-item {
 	overflow: hidden;  
 	position: relative;
@@ -183,3 +188,4 @@ fieldset {
 .contact textarea {
 	min-height: 100px;
 }
+
