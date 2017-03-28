@@ -82,7 +82,7 @@
           <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade in active" id="announce">
               <div class="table-responsive">
-                <table id="mytable" class="table table-bordred table-striped">
+                <table id="announce-table" class="table table-bordred table-striped">
                   <thead>
                     <th><input type="checkbox" id="checkall" /></th>
                     <th>รหัส</th>
@@ -170,7 +170,7 @@
 
             <div role="tabpanel" class="tab-pane fade" id="contact">
               <div class="table-responsive">
-                <table id="mytable" class="table table-bordred table-striped">
+                <table id="contact-table" class="table table-bordred table-striped">
                   <thead>
                     <th><input type="checkbox" id="checkall" /></th>
                     <th>รหัสประกาศ</th>
@@ -180,6 +180,7 @@
                     <th>เบอร์โทร</th>
                     <th>อีเมล์</th>
                     <th>ข้อความ</th>
+                    <th>ลบ</th>
                   </thead>
                   <tbody>
                     <tr>
@@ -191,6 +192,7 @@
                       <td>089-9999-9999</td>
                       <td>somchai@somchai.com</td>
                       <td>I’m interested in this property. Please contact me, thanks!</td>
+                      <td><p data-placement="top" title="Delete"><a class="btn btn-danger btn-xs" data-toggle="modal" data-target=".item-delete"><span class="glyphicon glyphicon-trash"></span></a></p></td>
                     </tr>
                     <tr>
                       <td><input type="checkbox" class="checkthis" /></td>
@@ -201,6 +203,7 @@
                       <td>089-9999-9999</td>
                       <td>somchai@somchai.com</td>
                       <td>I’m interested in this property. Please contact me, thanks!</td>
+                      <td><p data-placement="top" title="Delete"><a class="btn btn-danger btn-xs" data-toggle="modal" data-target=".item-delete"><span class="glyphicon glyphicon-trash"></span></a></p></td>
                     </tr>
                     <tr>
                       <td><input type="checkbox" class="checkthis" /></td>
@@ -211,6 +214,7 @@
                       <td>089-9999-9999</td>
                       <td>somchai@somchai.com</td>
                       <td>I’m interested in this property. Please contact me, thanks!</td>
+                      <td><p data-placement="top" title="Delete"><a class="btn btn-danger btn-xs" data-toggle="modal" data-target=".item-delete"><span class="glyphicon glyphicon-trash"></span></a></p></td>
                     </tr>
                     <tr>
                       <td><input type="checkbox" class="checkthis" /></td>
@@ -221,6 +225,7 @@
                       <td>089-9999-9999</td>
                       <td>somchai@somchai.com</td>
                       <td>I’m interested in this property. Please contact me, thanks!</td>
+                      <td><p data-placement="top" title="Delete"><a class="btn btn-danger btn-xs" data-toggle="modal" data-target=".item-delete"><span class="glyphicon glyphicon-trash"></span></a></p></td>
                     </tr>
                     <tr>
                       <td><input type="checkbox" class="checkthis" /></td>
@@ -231,6 +236,7 @@
                       <td>089-9999-9999</td>
                       <td>somchai@somchai.com</td>
                       <td>I’m interested in this property. Please contact me, thanks!</td>
+                      <td><p data-placement="top" title="Delete"><a class="btn btn-danger btn-xs" data-toggle="modal" data-target=".item-delete"><span class="glyphicon glyphicon-trash"></span></a></p></td>
                     </tr>
                   </tbody>
                 </table>
@@ -248,7 +254,7 @@
 
             <div role="tabpanel" class="tab-pane fade" id="news">
               <div class="table-responsive">
-                <table id="mytable" class="table table-bordred table-striped">
+                <table id="news-table" class="table table-bordred table-striped">
                   <thead>
                     <th><input type="checkbox" id="checkall" /></th>
                     <th>รหัส</th>
@@ -336,7 +342,7 @@
 
             <div role="tabpanel" class="tab-pane fade" id="member">
               <div class="table-responsive">
-                <table id="mytable" class="table table-bordred table-striped">
+                <table id="member-table" class="table table-bordred table-striped">
                   <thead>
                     <th><input type="checkbox" id="checkall" /></th>
                     <th>รหัส</th>
@@ -411,7 +417,7 @@
                 <div class="row" style="padding: 20px;">
 
                   <div class="form-group">
-                    <label class="col-md-4 control-label">cover picture : </label>
+                    <label class="col-md-4 control-label">homepage cover picture : </label>
                     <div class="col-md-4">
                       <!-- image-preview-filename input [CUT FROM HERE]-->
                       <div class="input-group image-preview">
