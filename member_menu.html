@@ -13,6 +13,10 @@
 
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
+  <link href="css/bootstrap-colorpicker.min.css" rel="stylesheet">
+
+  <script src="js/jquery-3.2.0.min.js"></script>
+  <script src="js/bootstrap-colorpicker.min.js"></script>
 </head>
 
 <body>
@@ -401,9 +405,97 @@
               </ul>
             </div> <!-- /member -->
 
-            <div role="tabpanel" class="tab-pane fade" id="setting">setting</div>
-          </div>
-        </div>
+            <div role="tabpanel" class="tab-pane fade" id="setting">
+              <form class="create-info form-horizontal">
+                <div class="row" style="padding: 20px;">
+
+                  <div class="form-group">
+                    <label class="col-md-4 control-label">cover picture : </label>
+                    <div class="col-md-4">
+                      <!-- image-preview-filename input [CUT FROM HERE]-->
+                      <div class="input-group image-preview">
+                        <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+                        <span class="input-group-btn">
+                          <!-- image-preview-clear button -->
+                          <button type="button" class="btn btn-default image-preview-clear" style="display:none; margin: 0px;">
+                            <span class="glyphicon glyphicon-remove"></span> Clear
+                          </button>
+                          <!-- image-preview-input -->
+                          <div class="btn btn-default image-preview-input">
+                            <span class="glyphicon glyphicon-folder-open"></span>
+                            <span class="image-preview-input-title">Browse</span>
+                            <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
+                          </div>
+                        </span>
+                      </div><!-- /input-group image-preview [TO HERE]--> 
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-4 control-label">background color: </label>
+                    <div class="col-md-2">
+                      <div id="cp1" data-format="alias" class="input-group colorpicker-component">
+                        <input type="text" value="primary" class="form-control" />
+                        <span class="input-group-addon"><i></i></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-4 control-label">navbar color : </label>
+                    <div class="col-md-2">
+                      <div id="cp2" data-format="alias" class="input-group colorpicker-component">
+                        <input type="text" value="primary" class="form-control" />
+                        <span class="input-group-addon"><i></i></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-4 control-label">navbar text color : </label>
+                    <div class="col-md-2">
+                      <div id="cp3" data-format="alias" class="input-group colorpicker-component">
+                        <input type="text" value="primary" class="form-control" />
+                        <span class="input-group-addon"><i></i></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-4 control-label">navbar selected link color : </label>
+                    <div class="col-md-2">
+                      <div id="cp4" data-format="alias" class="input-group colorpicker-component">
+                        <input type="text" value="primary" class="form-control" />
+                        <span class="input-group-addon"><i></i></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-4 control-label">navbar popup color : </label>
+                    <div class="col-md-2">
+                      <div id="cp5" data-format="alias" class="input-group colorpicker-component">
+                        <input type="text" value="primary" class="form-control" />
+                        <span class="input-group-addon"><i></i></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-2">
+                      <a type="button" class="btn btn-success">บันทึก</a>
+                      <a type="reset" class="btn btn-default">รีเซ็ต</a>
+                    </div>
+                  </div>
+
+
+                </div>
+              </form>
+            </div> <!-- /setting -->
+
+          </div> <!-- /tab pane -->
+        </div>  <!-- /tab nav -->
       </div> <!-- /panel body -->
     </div> <!-- /panel -->
 
@@ -421,8 +513,45 @@
     </footer>
   </div>
 
-  <script src="js/jquery-3.2.0.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/dbtable.js"></script>
+  <script src="js/uploadSingleImage.js"></script>
+
+  <script>
+    $(function() {
+      $('#cp1').colorpicker().on('changeColor', function(e) {
+        $('body')[0].style.backgroundColor = e.color.toString(
+          'rgba');
+      });
+
+      $('#cp2').colorpicker().on('changeColor', function(e) {
+        $('nav')[0].style.backgroundColor = e.color.toString(
+          'rgba');
+      });
+
+      $('#cp3').colorpicker().on('changeColor', function(e) {
+        for (var i = 0; i < $('nav a').length; i++) {
+          $('nav a')[i].style.color = e.color.toString(
+            'rgba');
+        }
+      });
+
+      $('#cp4').colorpicker().on('changeColor', function(e) {
+        $('.dropdown-toggle')[0].style.backgroundColor = e.color.toString(
+          'rgba');
+
+      });
+
+      $('#cp5').colorpicker().on('changeColor', function(e) {
+        $('.dropdown').addClass('open');
+
+        $('.dropdown-menu')[0].style.backgroundColor = e.color.toString(
+          'rgba');
+
+      });
+
+    });
+  </script>
+
 </body>
 </html>
