@@ -63,9 +63,9 @@
           <span class="glyphicon glyphicon-menu-right"></span>
           <a href="create_announce2.html" type="button" class="btn btn-success">รายละเอียดเพิ่มเติม</a>
           <span class="glyphicon glyphicon-menu-right"></span>
-          <a type="button" class="btn btn-primary">รูปภาพ</a>
+          <a href="create_announce3.html" type="button" class="btn btn-success">รูปภาพ</a>
           <span class="glyphicon glyphicon-menu-right"></span>
-          <a href="create_announce4.html" type="button" class="btn btn-default">สรุป</a>
+          <a class="btn btn-primary">สรุป</a>
           <h6 class="pull-right" style="color: red">* ข้อมูลที่จำเป็นต้องใช้</h6>
         </div>
 
@@ -73,38 +73,25 @@
           <div class="row">
             <fieldset>
 
-              <legend>ใส่รูปภาพ</legend>
-
-              <!-- Standar Form -->
-              <h4>Select files from your computer</h4>
-              <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
-                <div class="form-inline">
-                  <div class="form-group">
-                    <input type="file" name="files[]" id="js-upload-files" multiple>
-                  </div>
-                  <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Upload files</button>
-                </div>
-              </form>
-
-              <!-- Drop Zone -->
-              <h4>Or drag and drop files below</h4>
-              <div class="upload-drop-zone" id="drop-zone">
-                Just drag and drop files here
-              </div>
-
-              <!-- Progress Bar -->
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                  <span class="sr-only">60% Complete</span>
-                </div>
-              </div>
-
-              <!-- Upload Finished -->
-              <div class="js-upload-finished">
-                <h3>Processed files</h3>
-                <div class="list-group">
-                  <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-01.jpg</a>
-                  <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-02.jpg</a>
+              <legend>ตัวอย่างประกาศ</legend>
+              <div class="row">
+                <div class="list-group list-special result">
+                  <a href="#" class="list-group-item row-fluid">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+                      <figure class="pull-left">
+                        <img class="img-responsive" src="http://placehold.it/200x200">
+                      </figure>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                      <div class="caption">
+                        <h4>Residential</h4>
+                        <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </div>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+                      <h4 class="pull-right"> 14,200,000 <small> บาท </small></h4>
+                    </div>
+                  </a>
                 </div>
               </div>
               <br>
@@ -114,8 +101,8 @@
         </div>       
 
         <div class="panel-footer text-center">
-          <a href="create_announce2.html" type="button" class="btn btn-default">กลับ</a>
-          <a href="create_announce4.html" type="button" class="btn btn-primary">ถัดไป</a>
+          <a href="edit_announce3.html" type="button" class="btn btn-default">กลับ</a>
+          <a type="button" class="btn btn-success">บันทึก</a>
         </div>  
 
       </div>
@@ -136,6 +123,5 @@
 
   <script src="js/jquery-3.2.0.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/uploadMultiFile.js"></script>
 </body>
 </html>

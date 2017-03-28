@@ -61,9 +61,9 @@
         <div class="panel-body">
           <a href="create_announce.html" type="button" class="btn btn-success">ข้อมูลทั่วไป</a>
           <span class="glyphicon glyphicon-menu-right"></span>
-          <a type="button" class="btn btn-primary">รายละเอียดเพิ่มเติม</a>
+          <a href="create_announce2.html" type="button" class="btn btn-success">รายละเอียดเพิ่มเติม</a>
           <span class="glyphicon glyphicon-menu-right"></span>
-          <a href="create_announce3.html" type="button" class="btn btn-default">รูปภาพ</a>
+          <a type="button" class="btn btn-primary">รูปภาพ</a>
           <span class="glyphicon glyphicon-menu-right"></span>
           <a href="create_announce4.html" type="button" class="btn btn-default">สรุป</a>
           <h6 class="pull-right" style="color: red">* ข้อมูลที่จำเป็นต้องใช้</h6>
@@ -73,67 +73,38 @@
           <div class="row">
             <fieldset>
 
-              <legend>ข้อมูลเพิ่มเติม</legend>
-              <div class="form-group">
-                <label class="col-md-4 control-label">จำนวนชั้น : </label>
-                <div class="col-md-2">
-                  <input class="form-control" type="number">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-4 control-label">ค่านำ้ : </label>
-                <div class="col-md-3">
-                  <div class="input-group">
-                    <input class="form-control" type="number">
-                    <span class="input-group-addon">บาท/ยูนิต</span>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-4 control-label">ค่าไฟ : </label>
-                <div class="col-md-3">
-                  <div class="input-group">
-                    <input class="form-control" type="number">
-                    <span class="input-group-addon">บาท/ยูนิต</span>
-                  </div>
-                </div>
-              </div>
-              <br>
+              <legend>ใส่รูปภาพ</legend>
 
-              <legend>สิ่งอำนวยความสะดวก</legend>
-              <div class="control-group">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <label class="checkbox-inline"><input type="checkbox" value="">อินเตอร์เนต</label>
+              <!-- Standar Form -->
+              <h4>Select files from your computer</h4>
+              <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
+                <div class="form-inline">
+                  <div class="form-group">
+                    <input type="file" name="files[]" id="js-upload-files" multiple>
                   </div>
-                  <div class="col-sm-4">
-                    <label class="checkbox-inline"><input type="checkbox" value="">รักษาความปลอดภัย 24 ชั่วโมง</label>
-                  </div>
-                  <div class="col-sm-4">
-                    <label class="checkbox-inline"><input type="checkbox" value="">สระว่ายน้ำ</label>
-                  </div>
+                  <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Upload files</button>
                 </div>
-                <div class="row">
-                  <div class="col-sm-4">
-                    <label class="checkbox-inline"><input type="checkbox" value="">ฟิตเนส</label>
-                  </div>
-                  <div class="col-sm-4">
-                    <label class="checkbox-inline"><input type="checkbox" value="">ห้องอบซาวนา</label>
-                  </div>
-                  <div class="col-sm-4">
-                    <label class="checkbox-inline"><input type="checkbox" value="">ห้องประชุม</label>
-                  </div>
+              </form>
+
+              <!-- Drop Zone -->
+              <h4>Or drag and drop files below</h4>
+              <div class="upload-drop-zone" id="drop-zone">
+                Just drag and drop files here
+              </div>
+
+              <!-- Progress Bar -->
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                  <span class="sr-only">60% Complete</span>
                 </div>
-                <div class="row">
-                  <div class="col-sm-4">
-                    <label class="checkbox-inline"><input type="checkbox" value="">ซัก อบ รีด</label>
-                  </div>
-                  <div class="col-sm-4">
-                    <label class="checkbox-inline"><input type="checkbox" value="">กล้องวงจรปิด</label>
-                  </div>
-                  <div class="col-sm-4">
-                    <label class="checkbox-inline"><input type="checkbox" value="">ลานจอดรถ</label>
-                  </div>
+              </div>
+
+              <!-- Upload Finished -->
+              <div class="js-upload-finished">
+                <h3>Processed files</h3>
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-01.jpg</a>
+                  <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-02.jpg</a>
                 </div>
               </div>
               <br>
@@ -143,8 +114,9 @@
         </div>       
 
         <div class="panel-footer text-center">
-          <a href="create_announce.html" type="button" class="btn btn-default">กลับ</a>
-          <a href="create_announce3.html" type="button" class="btn btn-primary">ถัดไป</a>
+          <a href="edit_announce2.html" type="button" class="btn btn-default">กลับ</a>
+          <a type="button" class="btn btn-success">บันทึก</a>
+          <a href="edit_announce4.html" type="button" class="btn btn-primary">ถัดไป</a>
         </div>  
 
       </div>
@@ -165,5 +137,6 @@
 
   <script src="js/jquery-3.2.0.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/uploadMultiFile.js"></script>
 </body>
 </html>
